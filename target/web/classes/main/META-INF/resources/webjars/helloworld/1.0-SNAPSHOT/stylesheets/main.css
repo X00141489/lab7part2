@@ -1,0 +1,39 @@
+ Nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ Nav li a {
+    display: block;
+    width: 60px;
+}
+
+Nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+.container{
+    background-color: silver;
+    position:absolute;
+    top: 50px;
+    bottom: 0px; 
+}
+body {
+    font-family: Calibri;
+    background-color: cornsilk;
+}

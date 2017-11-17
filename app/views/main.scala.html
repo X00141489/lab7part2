@@ -1,0 +1,44 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+ @(pageID: String)(content: Html)
+ <!DOCTYPE html>
+ <html lang="en" id="@pageID">
+   <head>
+     <title>Core Design -@pageID</title>
+     <link href ="@routes.Assets.versioned("stylesheets/main.css")" rel ="stylesheet" type ="text/css"/>
+     <link href ="@routes.Assets.versioned("stylesheets/Form.css")" rel ="stylesheet" type ="text/css"/>
+   </head>
+   <body>
+     <div class="Container">
+       <div id="Logo">
+         <h1>Core Design</h1>
+         <h3>
+           <em>Website Design and Development Services</em>
+         </h3>
+       </div>
+       <div id ="Nav"<div class ="active">
+     <ul>
+       <li><a href="@routes.HomeController.index()" class="home">Home</a></li>
+       <li><a href="@routes.HomeController.about()" class="about">About Us</a></li>
+       <li><a href="@routes.HomeController.services()" class="services">Services</a></li>
+       <li><a href="@routes.HomeController.clients()" class="clients">Clients</a></li>
+       <li><a href="@routes.HomeController.contact()" class="contact">Contact</a></li>
+     </ul></div>
+
+     </div>
+     <div id ="Content">
+         @content
+     </div>
+     <div id="Footer">
+         <h6>
+             <em>copyright & copy; 2015  Core Design</em>
+             </h6>
+        
+     </div>
+     </div>
+   </body>
+ </html>
